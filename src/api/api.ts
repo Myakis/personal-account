@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { IUser } from '../types/types';
+import { INewUser, IUser } from '../types/types';
 
 interface IDataForm {
   email: string;
@@ -29,6 +29,9 @@ export const userAPI = {
   deleteUser(id: number) {
     return axios.delete(`http://localhost:4200/users/${id}`);
   },
+  addUser(data: INewUser) {
+    return axios.post(`http://localhost:4200/users`, data);
+  },
 };
 
 export const profileApi = {
@@ -39,7 +42,7 @@ export const profileApi = {
   },
 
   changeProfile(dataUser: IUser) {
-    return axios.put(`http://localhost:4200/users?id=${dataUser.id}`, dataUser);
+    return axios.put(`http://localhost:4200/users/${dataUser.id}`, dataUser);
   },
 };
 // authAPI.register({ email: 'mayskihevandre@gmail.com', password: '1234567' });

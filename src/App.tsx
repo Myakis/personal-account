@@ -9,7 +9,8 @@ function App() {
     <div className='App'>
       <Routes>
         <Route path='/' element={<UsersContainer />} />
-        <Route path='/user/:id' element={<ProfileUser />} />
+        <Route path='/user/:id' element={<ProfileUser />} />{' '}
+        <Route path='/newUser' element={<ProfileUser />} />
       </Routes>
     </div>
   );

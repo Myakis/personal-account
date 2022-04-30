@@ -1,15 +1,14 @@
 import { Box, Button, Input, InputLabel } from '@mui/material';
-import { error } from 'console';
 import { Formik } from 'formik';
 
 import React from 'react';
 
-interface IDataForm {
+export interface IDataForm {
   password: string;
   email: string;
 }
 
-interface IFormikProps {
+export interface IFormikProps {
   values: IDataForm;
   errors: IDataForm;
   touched: boolean;

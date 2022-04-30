@@ -2,12 +2,12 @@
   "users": [
     {
       "id": 2,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
+      "name": "Андрей",
+      "username": "Frontandrew",
+      "email": "myakishevandaasasasrey@gmail.com",
       "address": {
-        "street": "Victor Plains",
-        "city": "Wisokyburgh"
+        "city": "Уссурийск",
+        "street": ""
       }
     },
     {
@@ -22,12 +22,12 @@
     },
     {
       "id": 5,
-      "name": "Chelsey Dietrich",
+      "name": "Chelsey Dietrichggs",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
       "address": {
-        "street": "Skiles Walks",
-        "city": "Roscoeview"
+        "city": "Roscoeview",
+        "street": "Skiles Walks"
       }
     },
     {
@@ -48,36 +48,6 @@
       "address": {
         "street": "Rex Trail",
         "city": "Howemouth"
-      }
-    },
-    {
-      "id": 8,
-      "name": "Nicholas Runolfsdottir V",
-      "username": "Maxime_Nienow",
-      "email": "Sherwood@rosamond.me",
-      "address": {
-        "street": "Ellsworth Summit",
-        "city": "Aliyaview"
-      }
-    },
-    {
-      "id": 9,
-      "name": "Glenna Reichert",
-      "username": "Delphine",
-      "email": "Chaim_McDermott@dana.io",
-      "address": {
-        "street": "Dayna Park",
-        "city": "Bartholomebury"
-      }
-    },
-    {
-      "id": 10,
-      "name": "Clementina DuBuque",
-      "username": "Moriah.Stanton",
-      "email": "Rey.Padberg@karina.biz",
-      "address": {
-        "street": "Kattie Turnpike",
-        "city": "Lebsackbury"
       }
     }
   ],

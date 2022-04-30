@@ -12,8 +12,22 @@ export type ActionsTypes<T extends { [key: string]: (...args: any[]) => any }> =
 export type ThunkType = ThunkAction<void, StateType, unknown, AnyAction>;
 
 /////////////
-export interface IUser {
+// export interface IUser {
+//   id: number;
+//   name: string;
+//   username: string;
+//   email: string;
+//   address: {
+//     street: string;
+//     city: string;
+//   };
+// }
+
+export interface IUser extends INewUser {
   id: number;
+}
+
+export interface INewUser {
   name: string;
   username: string;
   email: string;

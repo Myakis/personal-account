@@ -1,0 +1,152 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "address": {
+        "street": "Kulas Light",
+        "city": "Gwenborough"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "address": {
+        "street": "Victor Plains",
+        "city": "Wisokyburgh"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "address": {
+        "street": "Douglas Extension",
+        "city": "McKenziehaven"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "address": {
+        "street": "Hoeger Mall",
+        "city": "South Elvis"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "address": {
+        "street": "Skiles Walks",
+        "city": "Roscoeview"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "address": {
+        "street": "Norberto Crossing",
+        "city": "South Christy"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Kurtis Weissnat",
+      "username": "Elwyn.Skiles",
+      "email": "Telly.Hoeger@billy.biz",
+      "address": {
+        "street": "Rex Trail",
+        "city": "Howemouth"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "email": "Sherwood@rosamond.me",
+      "address": {
+        "street": "Ellsworth Summit",
+        "city": "Aliyaview"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Glenna Reichert",
+      "username": "Delphine",
+      "email": "Chaim_McDermott@dana.io",
+      "address": {
+        "street": "Dayna Park",
+        "city": "Bartholomebury"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Clementina DuBuque",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "address": {
+        "street": "Kattie Turnpike",
+        "city": "Lebsackbury"
+      }
+    }
+  ],
+  "login": [],
+  "register": [
+    {
+      "email": "mayskihevandre@gmail.com",
+      "password": "1234567",
+      "id": 1
+    },
+    {
+      "email": "mayskihevandre@gmail.com",
+      "password": "1234567",
+      "id": 2
+    },
+    {
+      "email": "mayskihevandre@gmail.com",
+      "password": "1234567",
+      "id": 3
+    },
+    {
+      "email": "mayskihevandre@gmail.com",
+      "password": "1234567",
+      "id": 4
+    },
+    {
+      "email": "mayskihevandre@gmail.com",
+      "password": "1234567",
+      "id": 5
+    },
+    {
+      "email": "mayskihevandre@gmail.com",
+      "password": "1234567",
+      "id": 6
+    },
+    {
+      "email": "mayskihevandre@gmail.com",
+      "password": "1234567",
+      "id": 7
+    },
+    {
+      "email": "mayskihevandre@gmail.com",
+      "password": "1234567",
+      "id": 8
+    },
+    {
+      "email": "mayskihevandre@gmail.com",
+      "password": "1234567",
+      "id": 9
+    }
+  ]
+}

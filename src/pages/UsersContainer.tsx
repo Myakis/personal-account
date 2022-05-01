@@ -1,5 +1,5 @@
-import { Container } from '@mui/material';
 import React, { FC, useEffect, useState } from 'react';
+import { Container } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
@@ -9,15 +9,16 @@ import { getsUsers } from '../redux/reducer/user-reducer';
 import { StateType } from '../redux/store';
 import ProfileUser from '../components/User/UserProfile';
 import ButtonBack from '../components/common/ButtonBack';
+import { TDispatch } from '../types/types';
 
 const UsersContainer: FC = () => {
-  const users = useSelector((state: StateType) => state.usersPage.users);
   const isLoad = useSelector((state: StateType) => state.usersPage.isLoad);
-  const dispatch = useDispatch();
+  const users = useSelector((state: StateType) => state.usersPage.users);
   const [newUser, setNewUser] = useState(false);
+  const dispatch: TDispatch = useDispatch();
 
   useEffect(() => {
-    dispatch<any>(getsUsers());
+    dispatch(getsUsers());
   }, []);
 
   const addNewUser = () => {

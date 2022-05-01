@@ -5,12 +5,12 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { deleteUser } from '../../redux/reducer/user-reducer';
-import { IUser } from '../../types/types';
+import { IUser, TDispatch } from '../../types/types';
 
 const UserCard: FC<IUser> = ({ name, email, id }) => {
-  const dispatch = useDispatch();
+  const dispatch: TDispatch = useDispatch();
   const onDeleteUser = (id: number) => {
-    dispatch<any>(deleteUser(id));
+    dispatch(deleteUser(id));
   };
 
   return (

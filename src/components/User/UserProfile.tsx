@@ -1,5 +1,5 @@
-import { Button, Card, Container } from '@mui/material';
 import React, { FC, useEffect, useState } from 'react';
+import { Button, Card, Container } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { Box } from '@mui/system';
 
 import { getProfileUser } from '../../redux/reducer/user-reducer';
 import { StateType } from '../../redux/store';
-import { IUser } from '../../types/types';
+import { IUser, TDispatch } from '../../types/types';
 import Preloader from '../common/Preloader';
 import ButtonBack from '../common/ButtonBack';
 import UserProfileForm from './UserProfileForm';
@@ -26,15 +26,15 @@ interface IProfileUser {
 }
 
 const ProfileUser: FC<IProfileUser> = ({ setNewUser }) => {
-  const profile: IUser = useSelector((state: StateType) => state.usersPage.profile);
+  const profile: IUser | null = useSelector((state: StateType) => state.usersPage.profile);
   const [edit, setEdit] = useState(true);
-  const dispatch = useDispatch();
+  const dispatch: TDispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
     if (id) {
-      dispatch<any>(getProfileUser(id));
+      dispatch(getProfileUser(id));
     }
     if (setNewUser) {
       setEdit(false);

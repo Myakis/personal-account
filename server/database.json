@@ -3,8 +3,8 @@
     {
       "id": 1,
       "name": "Leanne Grahams",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
+      "username": "Bretetwsgsgsdfsg",
+      "email": "Sinfsde@april.biz",
       "address": {
         "city": "Gwenborough",
         "street": "Kulas Light"
@@ -101,20 +101,30 @@
       }
     },
     {
-      "name": "new user",
+      "id": 12,
+      "name": "new user edit",
       "username": "NeW_UsEr",
       "email": "newuser@mail.com",
       "address": {
         "city": "tokio",
         "street": "street"
+      }
+    },
+    {
+      "name": "new user 2 ",
+      "username": "new__user-2",
+      "email": "myakishevandrey@gmail.com",
+      "address": {
+        "city": "",
+        "street": ""
       },
-      "id": 12
+      "id": 13
     }
   ],
   "users": [
     {
       "email": "myakishevandrey@gmail.com",
-      "password": "$2a$10$isApDWbg5F7sz2pGzutdte.X.7LaLhR/bIpn9GBtwH5cIbRthZB7K",
+      "password": "$2a$10$2fVj7SZnJVuUJgz.CtA2Yea4GK5wAYFfF2L.3QronS1frL4GiGeXy",
       "id": 1
     }
   ]

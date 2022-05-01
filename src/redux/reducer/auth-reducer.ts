@@ -1,7 +1,6 @@
-import { error } from 'console';
-import { authAPI, IDataForm, profileApi } from './../../api/api';
-import { userAPI } from '../../api/api';
-import { ActionsTypes, INewUser, IUser, ThunkType } from '../../types/types';
+import { BaseThunkType } from './../../types/types';
+import { authAPI, IDataForm } from './../../api/api';
+import { ActionsTypes } from '../../types/types';
 
 const SET_USER_DATA = 'SET-USER-DATA';
 const ADD_ERROR = 'ADD_ERROR';
@@ -14,7 +13,12 @@ let initialState = {
 
 export type initialStateType = typeof initialState;
 
-const authReducer = (state = initialState, action: ActionsTypes<typeof actions>): any => {
+type ThunkType = BaseThunkType<ActionsTypes<typeof actions>>;
+
+const authReducer = (
+  state = initialState,
+  action: ActionsTypes<typeof actions>,
+): initialStateType => {
   switch (action.type) {
     case SET_USER_DATA:
       return {

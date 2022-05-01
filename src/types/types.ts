@@ -1,5 +1,5 @@
 import { ThunkAction } from 'redux-thunk';
-import { AnyAction } from 'redux';
+import { Action, Dispatch } from 'redux';
 
 import { StateType } from './../redux/store';
 
@@ -9,7 +9,13 @@ export type ActionsTypes<T extends { [key: string]: (...args: any[]) => any }> =
   InferValueTypes<T>
 >;
 //Типизирование Thnuk
-export type ThunkType = ThunkAction<void, StateType, unknown, AnyAction>;
+export type BaseThunkType<A extends Action, R = Promise<void>> = ThunkAction<
+  R,
+  StateType,
+  unknown,
+  A
+>;
+export type TDispatch = Dispatch<any>;
 
 export interface IUser extends INewUser {
   id: number;

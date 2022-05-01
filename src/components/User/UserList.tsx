@@ -1,5 +1,5 @@
-import { Box } from '@mui/material';
 import React, { FC } from 'react';
+import { Box } from '@mui/material';
 
 import { IUser } from '../../types/types';
 import Preloader from '../common/Preloader';

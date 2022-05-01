@@ -1,20 +1,20 @@
+import React, { FC } from 'react';
 import { Button, Input, InputLabel } from '@mui/material';
 import { Box } from '@mui/system';
 import { Formik } from 'formik';
-import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import { addNewUser, updateProfile } from '../../redux/reducer/user-reducer';
-import { IUser } from '../../types/types';
+import { IUser, TDispatch } from '../../types/types';
 import { IValuesForm } from './UserProfile';
 
 interface IUserProfile {
-  profile: IUser;
+  profile: IUser | null;
   edit: boolean;
   setEdit: (edit: boolean) => void;
 }
 
 const UserProfileForm: FC<IUserProfile> = ({ profile, edit, setEdit }) => {
-  const dispatch = useDispatch();
+  const dispatch: TDispatch = useDispatch();
   return (
     <div>
       <Formik
@@ -53,7 +53,7 @@ const UserProfileForm: FC<IUserProfile> = ({ profile, edit, setEdit }) => {
                 street: values.street,
               },
             };
-            dispatch<any>(updateProfile(dataProfile));
+            dispatch(updateProfile(dataProfile));
           } else {
             const dataProfile = {
               name: values.name,
@@ -64,7 +64,7 @@ const UserProfileForm: FC<IUserProfile> = ({ profile, edit, setEdit }) => {
                 street: values.street,
               },
             };
-            dispatch<any>(addNewUser(dataProfile));
+            dispatch(addNewUser(dataProfile));
           }
 
           setEdit(true);

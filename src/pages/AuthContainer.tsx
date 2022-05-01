@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
 import { Box } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import React, { useState } from 'react';
 
 import { actions } from '../redux/reducer/auth-reducer';
 import { useSelector } from 'react-redux';
@@ -10,17 +10,6 @@ import Login from '../components/Login';
 export interface IDataForm {
   password: string;
   email: string;
-}
-
-export interface IFormikProps {
-  values: IDataForm;
-  errors: IDataForm;
-  touched: boolean;
-  isSubmitting: boolean;
-
-  handleChange: (e: React.ChangeEvent<any>) => void;
-  handleBlur: (e: React.FocusEvent<any, Element>) => void;
-  handleSubmit: (e?: React.FormEvent<HTMLFormElement> | undefined) => void;
 }
 
 const AuthContainer = () => {

@@ -1,4 +1,39 @@
-# Getting Started with Create React App
+# Список пользователей
+
+## Список пользователей с авторизацией в личном кабинете. Реализована возможность добавлять/удалять и редактировать профиль пользователя, так же присутствует поиск по имени.
+
+### Node v16.13.1
+
+### Используемый Stack
+
+- React
+- Redux
+- TypeScript
+- react-router-dom
+- redux-thunk
+- formik
+- axios
+- json-server
+- material-ui
+
+### Инструкция по запуску проекта
+
+Клонировать(или скачать архивом) себе репозиторий
+
+### `git clone https://github.com/Myakis/personal-account.git . `
+
+Установить зависимости
+
+### `yarn install`
+
+Запустить проект
+
+### `yarn dev`
+
+![Поле входа](https://github.com/Myakis/personal-account/raw/master/preview.png)
+![Список пользователей](https://github.com/Myakis/personal-account/raw/master/preview1.png)
+![Просмотр профиля](https://github.com/Myakis/personal-account/raw/master/preview2.png)
+![Редактирование профиля](https://github.com/Myakis/personal-account/raw/master/preview3.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

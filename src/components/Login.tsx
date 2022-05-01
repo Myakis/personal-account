@@ -1,14 +1,14 @@
+import React, { FC } from 'react';
 import { Box, Button, Input, InputLabel, Link } from '@mui/material';
 import { Formik } from 'formik';
-import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { IDataForm } from '../pages/AuthContainer';
 import { login, register } from '../redux/reducer/auth-reducer';
-import { ILogin } from '../types/types';
+import { ILogin, TDispatch } from '../types/types';
 
 const Login: FC<ILogin> = ({ errorLogin, isLogin, onChangeForm }) => {
-  const dispatch = useDispatch();
+  const dispatch: TDispatch = useDispatch();
 
   return (
     <Box
@@ -43,9 +43,9 @@ const Login: FC<ILogin> = ({ errorLogin, isLogin, onChangeForm }) => {
         }}
         onSubmit={(values, { setSubmitting }) => {
           if (isLogin) {
-            dispatch<any>(login(values));
+            dispatch(login(values));
           } else {
-            dispatch<any>(register(values));
+            dispatch(register(values));
           }
           setSubmitting(false);
         }}>

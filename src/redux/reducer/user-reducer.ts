@@ -1,10 +1,7 @@
 import { profileApi } from './../../api/api';
 import { userAPI } from '../../api/api';
-import { ActionsTypes, INewUser, IUser, ThunkType } from '../../types/types';
+import { ActionsTypes, BaseThunkType, INewUser, IUser } from '../../types/types';
 
-const GET_USER_SUCCESS = 'GET_USER_SUCCESS';
-const GET_PROFILE_USER = 'GET_PROFILE_USER';
-const TOGGLE_LOAD = 'TOGGLE_LOAD';
 let initialState = {
   users: [] as Array<IUser>,
   profile: null as IUser | null,
@@ -12,22 +9,26 @@ let initialState = {
 };
 
 export type initialStateType = typeof initialState;
+export type ThunkType = BaseThunkType<ActionsTypes<typeof actions>>;
 
-const userReducer = (state = initialState, action: ActionsTypes<typeof actions>): any => {
+const userReducer = (
+  state = initialState,
+  action: ActionsTypes<typeof actions>,
+): initialStateType => {
   switch (action.type) {
-    case GET_USER_SUCCESS:
+    case 'GET_USER_SUCCESS':
       return {
         ...state,
         users: action.users,
         profile: null,
         isLoad: true,
       };
-    case GET_PROFILE_USER:
+    case 'GET_PROFILE_USER':
       return {
         ...state,
         profile: action.profile,
       };
-    case TOGGLE_LOAD: {
+    case 'TOGGLE_LOAD': {
       return {
         ...state,
         isLoad: action.load,
@@ -40,9 +41,9 @@ const userReducer = (state = initialState, action: ActionsTypes<typeof actions>)
 
 //Action Creator
 export const actions = {
-  getsUsers: (users: Array<IUser>) => ({ type: GET_USER_SUCCESS, users } as const),
-  getProfile: (profile: IUser) => ({ type: GET_PROFILE_USER, profile } as const),
-  toggleLoad: (load: boolean) => ({ type: TOGGLE_LOAD, load } as const),
+  getsUsers: (users: Array<IUser>) => ({ type: 'GET_USER_SUCCESS', users } as const),
+  getProfile: (profile: IUser) => ({ type: 'GET_PROFILE_USER', profile } as const),
+  toggleLoad: (load: boolean) => ({ type: 'TOGGLE_LOAD', load } as const),
 };
 
 //THUNK
@@ -72,9 +73,8 @@ export const addNewUser =
     dispatch(getsUsers());
   };
 
-export const filterUser =
-  (name: string): ThunkType =>
-  async dispatch => {
+export const filterUser = (name: string): ThunkType => {
+  return async dispatch => {
     if (name.length) {
       const users = await userAPI.filterUser(name);
       dispatch(actions.getsUsers(users));
@@ -83,6 +83,7 @@ export const filterUser =
       dispatch(actions.getsUsers(users));
     }
   };
+};
 
 export const getProfileUser =
   (id: string): ThunkType =>

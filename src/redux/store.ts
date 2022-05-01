@@ -1,8 +1,7 @@
-import { useDispatch } from 'react-redux';
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import authReducer from './reducer/auth-reducer';
 
+import authReducer from './reducer/auth-reducer';
 import userReducer from './reducer/user-reducer';
 
 let rootReducer = combineReducers({
@@ -10,16 +9,11 @@ let rootReducer = combineReducers({
   usersPage: userReducer,
 });
 
-type AppRootReducer = typeof rootReducer;
-export type StateType = ReturnType<AppRootReducer>;
+export type StateType = ReturnType<typeof rootReducer>;
 
-//Для работоспособности расширения redux devtools
+//Для работоспособности расширения redux devTools
 //@ts-ignore
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
-
 export default store;
-
-export type AppDispatch = typeof store.dispatch;
-export const useAppDispatch = () => useDispatch<AppDispatch>();

@@ -30,10 +30,10 @@
 
 ### `yarn dev`
 
-![Поле входа](https://github.com/Myakis/personal-account/raw/master/preview.png)
-![Список пользователей](https://github.com/Myakis/personal-account/raw/master/preview1.png)
-![Просмотр профиля](https://github.com/Myakis/personal-account/raw/master/preview2.png)
-![Редактирование профиля](https://github.com/Myakis/personal-account/raw/master/preview3.png)
+![Поле входа](https://github.com/Myakis/personal-account/raw/main/preview.png)
+![Список пользователей](https://github.com/Myakis/personal-account/raw/main/preview1.png)
+![Просмотр профиля](https://github.com/Myakis/personal-account/raw/main/preview2.png)
+![Редактирование профиля](https://github.com/Myakis/personal-account/raw/main/preview3.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

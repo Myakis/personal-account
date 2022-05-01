@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import AuthContainer from '../pages/AuthContainer';
-import UsersContainer from '../pages/UsersContainer';
-import { StateType } from '../redux/store';
-import ProfileUser from './User/UserProfile';
+import AuthContainer from '../../pages/AuthContainer';
+import UsersContainer from '../../pages/UsersContainer';
+import { StateType } from '../../redux/store';
+import ProfileUser from '../User/UserProfile';
 
-const Routers = () => {
+const Routers: FC = () => {
   const isAuth = useSelector((state: StateType) => state.auth.isAuth);
 
   return (

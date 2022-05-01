@@ -3,9 +3,9 @@ import { Box, Button, Input, InputLabel, Link } from '@mui/material';
 import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 
-import { IDataForm } from '../pages/AuthContainer';
-import { login, register } from '../redux/reducer/auth-reducer';
-import { ILogin, TDispatch } from '../types/types';
+import { IDataForm } from '../../pages/AuthContainer';
+import { login, register } from '../../redux/reducer/auth-reducer';
+import { ILogin, TDispatch } from '../../types/types';
 
 const Login: FC<ILogin> = ({ errorLogin, isLogin, onChangeForm }) => {
   const dispatch: TDispatch = useDispatch();
@@ -110,7 +110,6 @@ const Login: FC<ILogin> = ({ errorLogin, isLogin, onChangeForm }) => {
           </form>
         )}
       </Formik>
-      <Box display={'flex'} justifyContent='flex-end'></Box>
     </Box>
   );
 };

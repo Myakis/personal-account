@@ -2,9 +2,6 @@ import { BaseThunkType } from './../../types/types';
 import { authAPI, IDataForm } from './../../api/api';
 import { ActionsTypes } from '../../types/types';
 
-const SET_USER_DATA = 'SET-USER-DATA';
-const ADD_ERROR = 'ADD_ERROR';
-
 let initialState = {
   isAuth: false as boolean,
   profile: null as { email: string } | null,
@@ -20,7 +17,7 @@ const authReducer = (
   action: ActionsTypes<typeof actions>,
 ): initialStateType => {
   switch (action.type) {
-    case SET_USER_DATA:
+    case 'SET_USER_DATA':
       return {
         ...state,
         isAuth: action.payload.isAuth,
@@ -30,7 +27,7 @@ const authReducer = (
         },
         error: null,
       };
-    case ADD_ERROR:
+    case 'ADD_ERROR':
       return {
         ...state,
         error: action.error,
@@ -44,8 +41,8 @@ const authReducer = (
 //Action Creator
 export const actions = {
   setAuthUSerData: (email: string, isAuth: boolean) =>
-    ({ type: SET_USER_DATA, payload: { email, isAuth } } as const),
-  addError: (error: string) => ({ type: ADD_ERROR, error } as const),
+    ({ type: 'SET_USER_DATA', payload: { email, isAuth } } as const),
+  addError: (error: string) => ({ type: 'ADD_ERROR', error } as const),
 };
 interface IResponseLogin {
   accessToken: string;

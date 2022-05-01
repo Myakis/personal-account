@@ -5,7 +5,8 @@ import { useDispatch } from 'react-redux';
 import { actions } from '../redux/reducer/auth-reducer';
 import { useSelector } from 'react-redux';
 import { StateType } from '../redux/store';
-import Login from '../components/Login';
+import Login from '../components/Login/Login';
+import Register from '../components/Login/Register';
 
 export interface IDataForm {
   password: string;
@@ -24,7 +25,11 @@ const AuthContainer = () => {
 
   return (
     <Box display='flex' alignItems={'center'} justifyContent='center' minHeight={'100vh'}>
-      <Login isLogin={isLogin} errorLogin={errorLogin} onChangeForm={onChangeForm} />
+      {isLogin ? (
+        <Login isLogin={true} errorLogin={errorLogin} onChangeForm={onChangeForm} />
+      ) : (
+        <Register errorLogin={errorLogin} onChangeForm={onChangeForm} />
+      )}
     </Box>
   );
 };

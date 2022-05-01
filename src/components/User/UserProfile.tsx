@@ -12,14 +12,6 @@ import Preloader from '../common/Preloader';
 import ButtonBack from '../common/ButtonBack';
 import UserProfileForm from './UserProfileForm';
 
-export interface IValuesForm {
-  name: string;
-  email: string;
-  username: string;
-  street: string;
-  city: string;
-}
-
 interface IProfileUser {
   isNewUser?: boolean;
   setNewUser?: (newUser: boolean) => void;

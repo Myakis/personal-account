@@ -4,8 +4,7 @@ import { Box } from '@mui/system';
 import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { addNewUser, updateProfile } from '../../redux/reducer/user-reducer';
-import { IUser, TDispatch } from '../../types/types';
-import { IValuesForm } from './UserProfile';
+import { IUser, IValuesForm, TDispatch } from '../../types/types';
 
 interface IUserProfile {
   profile: IUser | null;

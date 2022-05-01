@@ -102,51 +102,5 @@
     }
   ],
   "login": [],
-  "register": [
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 1
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 2
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 3
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 4
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 5
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 6
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 7
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 8
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 9
-    }
-  ]
+  "register": []
 }

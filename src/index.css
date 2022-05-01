@@ -15,6 +15,13 @@ code {
 h1 {
   text-align: center;
 }
+h1 span {
+  font-size: 12px;
+  display: block;
+  font-weight: 400;
+  color: rgb(173, 15, 15);
+  margin-top: 10px;
+}
 
 .error {
   color: rgb(173, 15, 15);
@@ -23,6 +30,7 @@ h1 {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 label > span {
@@ -32,4 +40,12 @@ label > span {
 
 button a {
   display: inline-flex;
+}
+
+.form__prompt p {
+  margin: 0;
+  font-size: 12px;
+}
+.form__prompt button {
+  font-size: 11px;
 }

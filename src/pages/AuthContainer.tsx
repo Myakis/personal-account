@@ -1,7 +1,11 @@
-import { Box, Button, Input, InputLabel } from '@mui/material';
+import { Box, Button, Input, InputLabel, Link } from '@mui/material';
 import { Formik } from 'formik';
+import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
 
-import React from 'react';
+import { actions, login, register } from '../redux/reducer/auth-reducer';
+import { useSelector } from 'react-redux';
+import { StateType } from '../redux/store';
 
 export interface IDataForm {
   password: string;
@@ -20,6 +24,15 @@ export interface IFormikProps {
 }
 
 const AuthContainer = () => {
+  const [isLogin, setLogin] = useState(true);
+  const errorLogin = useSelector((state: StateType) => state.auth.error);
+  const dispatch = useDispatch();
+
+  const onChangeForm = () => {
+    dispatch(actions.addError(''));
+    setLogin(!isLogin);
+  };
+
   return (
     <Box display='flex' alignItems={'center'} justifyContent='center' minHeight={'100vh'}>
       <Box
@@ -31,7 +44,11 @@ const AuthContainer = () => {
         gap='1rem'
         maxWidth='500px'
         width={'100%'}>
-        <h1>Вход в личный кабинет</h1>
+        <h1>
+          {isLogin ? 'Вход в личный кабинет' : 'Регистрация'}
+          {errorLogin && <span>{errorLogin}</span>}
+        </h1>
+
         <Formik
           initialValues={{ email: '', password: '' }}
           validate={(values: IDataForm) => {
@@ -49,7 +66,11 @@ const AuthContainer = () => {
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            console.log(values);
+            if (isLogin) {
+              dispatch<any>(login(values));
+            } else {
+              dispatch<any>(register(values));
+            }
             setSubmitting(false);
           }}>
           {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
@@ -82,17 +103,38 @@ const AuthContainer = () => {
                     <div className='error'>{errors.password}</div>
                   )}
                 </InputLabel>
-                <Box display={'flex'} justifyContent='flex-end'>
+                <Box display={'flex'} justifyContent='space-between' alignItems={'center'}>
+                  <Box className={'form__prompt'}>
+                    {isLogin ? (
+                      <p>
+                        Вас еще нет с нами?{' '}
+                        <Link color='inherit' onClick={onChangeForm}>
+                          Зарегистрируйтесь
+                        </Link>
+                      </p>
+                    ) : (
+                      <p>
+                        Уже зарегистрированы?{' '}
+                        <Link color='inherit' onClick={onChangeForm}>
+                          Войти
+                        </Link>
+                      </p>
+                    )}
+                  </Box>
                   <Button
                     style={{ width: '150px' }}
+                    size={'small'}
                     color='inherit'
                     type='submit'
-                    disabled={isSubmitting}></Button>
+                    disabled={isSubmitting}>
+                    {isLogin ? ' Войти' : 'Зарегистриваться'}
+                  </Button>
                 </Box>
               </Box>
             </form>
           )}
         </Formik>
+        <Box display={'flex'} justifyContent='flex-end'></Box>
       </Box>
     </Box>
   );

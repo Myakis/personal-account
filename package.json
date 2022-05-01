@@ -38,7 +38,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -w server/database.json -p 4200"
+    "server": "json-server -w server/database.json -m ./node_modules/json-server-auth -p 4200",
+    "dev": " concurrently \"yarn  server\" \"yarn  start\""
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +60,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^7.1.0",
     "json-server": "^0.17.0",
     "json-server-auth": "^2.1.0"
   }

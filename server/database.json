@@ -1,13 +1,23 @@
 {
-  "users": [
+  "listUsers": [
+    {
+      "id": 1,
+      "name": "Leanne Grahams",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "address": {
+        "city": "Gwenborough",
+        "street": "Kulas Light"
+      }
+    },
     {
       "id": 2,
-      "name": "Андрей",
-      "username": "Frontandrew",
-      "email": "myakishevandaasasasrey@gmail.com",
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
       "address": {
-        "city": "Уссурийск",
-        "street": ""
+        "street": "Victor Plains",
+        "city": "Wisokyburgh"
       }
     },
     {
@@ -16,18 +26,28 @@
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
       "address": {
-        "street": "Douglas Extension",
-        "city": "McKenziehaven"
+        "city": "McKenziehaven",
+        "street": "Douglas Extension"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "address": {
+        "street": "Hoeger Mall",
+        "city": "South Elvis"
       }
     },
     {
       "id": 5,
-      "name": "Chelsey Dietrichggs",
+      "name": "Chelsey Dietrich",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
       "address": {
-        "city": "Roscoeview",
-        "street": "Skiles Walks"
+        "street": "Skiles Walks",
+        "city": "Roscoeview"
       }
     },
     {
@@ -49,54 +69,43 @@
         "street": "Rex Trail",
         "city": "Howemouth"
       }
+    },
+    {
+      "id": 8,
+      "name": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "email": "Sherwood@rosamond.me",
+      "address": {
+        "street": "Ellsworth Summit",
+        "city": "Aliyaview"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Glenna Reichert",
+      "username": "Delphine",
+      "email": "Chaim_McDermott@dana.io",
+      "address": {
+        "street": "Dayna Park",
+        "city": "Bartholomebury"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Clementina DuBuque",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "address": {
+        "street": "Kattie Turnpike",
+        "city": "Lebsackbury"
+      }
     }
   ],
-  "login": [],
-  "register": [
+  "users": [
     {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
+      "email": "myakishevandrey@gmail.com",
+      "password": "$2a$10$isApDWbg5F7sz2pGzutdte.X.7LaLhR/bIpn9GBtwH5cIbRthZB7K",
       "id": 1
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 2
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 3
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 4
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 5
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 6
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 7
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 8
-    },
-    {
-      "email": "mayskihevandre@gmail.com",
-      "password": "1234567",
-      "id": 9
     }
   ]
 }

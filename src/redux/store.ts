@@ -1,10 +1,12 @@
 import { useDispatch } from 'react-redux';
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
+import authReducer from './reducer/auth-reducer';
 
 import userReducer from './reducer/user-reducer';
 
 let rootReducer = combineReducers({
+  auth: authReducer,
   usersPage: userReducer,
 });
 

@@ -1,14 +1,14 @@
-import { Box, Button, Container } from '@mui/material';
+import { Container } from '@mui/material';
 import React, { FC, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import Search from '../components/Seacrh';
-import UserList from '../components/UserList';
+
+import Search from '../components/Search';
+import UserList from '../components/User/UserList';
 import { getsUsers } from '../redux/reducer/user-reducer';
 import { StateType } from '../redux/store';
-import PlusOneIcon from '@mui/icons-material/PlusOne';
-import { Link } from 'react-router-dom';
-import ProfileUser from '../components/ProfileUser';
+import ProfileUser from '../components/User/UserProfile';
+import ButtonBack from '../components/common/ButtonBack';
 
 const UsersContainer: FC = () => {
   const users = useSelector((state: StateType) => state.usersPage.users);
@@ -23,6 +23,7 @@ const UsersContainer: FC = () => {
   const addNewUser = () => {
     setNewUser(true);
   };
+
   return (
     <>
       <Container maxWidth='md'>
@@ -31,21 +32,8 @@ const UsersContainer: FC = () => {
         ) : (
           <>
             <Search />
+            <ButtonBack onHandler={addNewUser}></ButtonBack>
             <UserList users={users} isLoad={isLoad} />
-            <Box
-              display={'flex'}
-              justifyContent='center'
-              position={'absolute'}
-              top={'10px'}
-              left={'50px'}
-              width='50px'
-              height={'50px'}
-              borderRadius={'100%'}
-              overflow={'hidden'}>
-              <Button variant='contained' onClick={addNewUser}>
-                <PlusOneIcon />
-              </Button>
-            </Box>
           </>
         )}
       </Container>

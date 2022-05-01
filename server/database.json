@@ -99,6 +99,16 @@
         "street": "Kattie Turnpike",
         "city": "Lebsackbury"
       }
+    },
+    {
+      "name": "new user",
+      "username": "NeW_UsEr",
+      "email": "newuser@mail.com",
+      "address": {
+        "city": "tokio",
+        "street": "street"
+      },
+      "id": 12
     }
   ],
   "users": [

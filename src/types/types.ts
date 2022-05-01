@@ -11,18 +11,6 @@ export type ActionsTypes<T extends { [key: string]: (...args: any[]) => any }> =
 //Типизирование Thnuk
 export type ThunkType = ThunkAction<void, StateType, unknown, AnyAction>;
 
-/////////////
-// export interface IUser {
-//   id: number;
-//   name: string;
-//   username: string;
-//   email: string;
-//   address: {
-//     street: string;
-//     city: string;
-//   };
-// }
-
 export interface IUser extends INewUser {
   id: number;
 }
@@ -35,4 +23,10 @@ export interface INewUser {
     street: string;
     city: string;
   };
+}
+
+export interface ILogin {
+  isLogin: boolean;
+  errorLogin: string | null;
+  onChangeForm: () => void;
 }

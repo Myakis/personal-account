@@ -48,10 +48,3 @@ export const profileApi = {
     return instanceAxios.put(`listUsers/${dataUser.id}`, dataUser);
   },
 };
-
-const FormData = { email: 'mayskihevandre@gmail.com', password: '1234567' };
-const FormData2 = { email: 'mayskihevandre@gmail.com', password: '12345672' };
-// authAPI.register({ email: 'mayskihevandre@gmail.com', password: '1234567' });
-// authAPI.login({ email: 'mayskihevandre@gmail.com', password: '1234567' });
-// authAPI.register(FormData);
-// console.log(authAPI.login(FormData));

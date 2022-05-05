@@ -1,13 +1,12 @@
 import { Box, TextField } from '@mui/material';
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 
 import { filterUser } from '../redux/reducer/user-reducer';
-import { TDispatch } from '../types/types';
+import { useAppDispatch } from '../types/types';
 
 const Search = () => {
   const [value, setValue] = useState('');
-  const dispatch: TDispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const searchHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);

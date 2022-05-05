@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Box } from '@mui/material';
 import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { actions } from '../redux/reducer/auth-reducer';
-import { useSelector } from 'react-redux';
 import { StateType } from '../redux/store';
 import Login from '../components/Login/Login';
 import Register from '../components/Login/Register';

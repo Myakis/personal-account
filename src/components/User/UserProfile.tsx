@@ -1,13 +1,12 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Button, Card, Container } from '@mui/material';
 import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Box } from '@mui/system';
 
 import { getProfileUser } from '../../redux/reducer/user-reducer';
 import { StateType } from '../../redux/store';
-import { IUser, TDispatch } from '../../types/types';
+import { IUser, useAppDispatch } from '../../types/types';
 import Preloader from '../common/Preloader';
 import ButtonBack from '../common/ButtonBack';
 import UserProfileForm from './UserProfileForm';
@@ -20,7 +19,7 @@ interface IProfileUser {
 const ProfileUser: FC<IProfileUser> = ({ setNewUser }) => {
   const profile: IUser | null = useSelector((state: StateType) => state.usersPage.profile);
   const [edit, setEdit] = useState(true);
-  const dispatch: TDispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
 

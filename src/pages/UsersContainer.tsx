@@ -1,6 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Container } from '@mui/material';
-import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
 import Search from '../components/Search';
@@ -9,13 +8,13 @@ import { getsUsers } from '../redux/reducer/user-reducer';
 import { StateType } from '../redux/store';
 import ProfileUser from '../components/User/UserProfile';
 import ButtonBack from '../components/common/ButtonBack';
-import { TDispatch } from '../types/types';
+import { useAppDispatch } from '../types/types';
 
 const UsersContainer: FC = () => {
   const isLoad = useSelector((state: StateType) => state.usersPage.isLoad);
   const users = useSelector((state: StateType) => state.usersPage.users);
   const [newUser, setNewUser] = useState(false);
-  const dispatch: TDispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(getsUsers());

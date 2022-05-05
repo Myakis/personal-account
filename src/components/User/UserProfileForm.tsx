@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { Button, Input, InputLabel } from '@mui/material';
 import { Box } from '@mui/system';
 import { Formik } from 'formik';
-import { useDispatch } from 'react-redux';
+
 import { addNewUser, updateProfile } from '../../redux/reducer/user-reducer';
-import { IUser, IValuesForm, TDispatch } from '../../types/types';
+import { IUser, IValuesForm, useAppDispatch } from '../../types/types';
 
 interface IUserProfile {
   profile: IUser | null;
@@ -13,7 +13,7 @@ interface IUserProfile {
 }
 
 const UserProfileForm: FC<IUserProfile> = ({ profile, edit, setEdit }) => {
-  const dispatch: TDispatch = useDispatch();
+  const dispatch = useAppDispatch();
   return (
     <div>
       <Formik

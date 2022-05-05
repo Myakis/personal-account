@@ -1,7 +1,8 @@
-import { ThunkAction } from 'redux-thunk';
-import { Action, Dispatch } from 'redux';
+import { ThunkAction, ThunkDispatch } from 'redux-thunk';
+import { Action } from 'redux';
 
-import { StateType } from './../redux/store';
+import store, { StateType } from './../redux/store';
+import { useDispatch } from 'react-redux';
 
 //Типизация Actions
 type InferValueTypes<T> = T extends { [key: string]: infer U } ? U : never;
@@ -9,7 +10,7 @@ export type ActionsTypes<T extends { [key: string]: (...args: any[]) => any }> =
   InferValueTypes<T>
 >;
 
-//Типизирование Thnuk
+//Типизирование Thunk
 export type BaseThunkType<A extends Action, R = Promise<void>> = ThunkAction<
   R,
   StateType,
@@ -17,9 +18,10 @@ export type BaseThunkType<A extends Action, R = Promise<void>> = ThunkAction<
   A
 >;
 
-//Не смог разобраться с типизаций useDispatch react-redux v>8
-//Переписал на фукционал, который шел из коробки в react-redux v7.2.6
-export type TDispatch = Dispatch<any>;
+//Типизация dispatch для корректной работы с thunk в react-redux v.>8
+type AppAction = ReturnType<typeof store.dispatch>;
+export type AppDispatch = ThunkDispatch<StateType, any, AppAction>;
+export const useAppDispatch = () => useDispatch<AppDispatch>();
 
 //////////////////////
 export interface IUser extends INewUser {

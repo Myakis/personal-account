@@ -1,14 +1,13 @@
 import React, { FC } from 'react';
 import { Box, Card, List, ListItem } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { deleteUser } from '../../redux/reducer/user-reducer';
-import { IUser, TDispatch } from '../../types/types';
+import { IUser, useAppDispatch } from '../../types/types';
 
 const UserCard: FC<IUser> = ({ name, email, id }) => {
-  const dispatch: TDispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const onDeleteUser = (id: number) => {
     dispatch(deleteUser(id));
   };

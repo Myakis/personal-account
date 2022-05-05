@@ -1,14 +1,13 @@
 import React, { FC } from 'react';
 import { Box, Button, Input, InputLabel, Link } from '@mui/material';
 import { Formik } from 'formik';
-import { useDispatch } from 'react-redux';
 
 import { IDataForm } from '../../pages/AuthContainer';
 import { login, register } from '../../redux/reducer/auth-reducer';
-import { ILogin, TDispatch } from '../../types/types';
+import { ILogin, useAppDispatch } from '../../types/types';
 
 const Login: FC<ILogin> = ({ errorLogin, isLogin, onChangeForm }) => {
-  const dispatch: TDispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <Box
